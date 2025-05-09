@@ -1,0 +1,129 @@
+{
+  "config_general": {
+    "lighteval_sha": "?",
+    "num_fewshot_seeds": 1,
+    "max_samples": 10,
+    "job_id": 0,
+    "start_time": 458542.138609986,
+    "end_time": 458603.022206712,
+    "total_evaluation_time_secondes": "60.88359672599472",
+    "model_name": "openai-community/gpt2",
+    "model_sha": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "model_dtype": "float16",
+    "model_size": "238.85 MB",
+    "generation_parameters": {
+      "early_stopping": null,
+      "repetition_penalty": null,
+      "frequency_penalty": null,
+      "length_penalty": null,
+      "presence_penalty": null,
+      "max_new_tokens": null,
+      "min_new_tokens": null,
+      "seed": null,
+      "stop_tokens": null,
+      "temperature": null,
+      "top_k": null,
+      "min_p": null,
+      "top_p": null,
+      "truncate_prompt": null,
+      "response_format": null
+    }
+  },
+  "results": {
+    "leaderboard|truthfulqa:mc|0": {
+      "truthfulqa_mc1": 0.3,
+      "truthfulqa_mc1_stderr": 0.15275252316519466,
+      "truthfulqa_mc2": 0.4181127207417902,
+      "truthfulqa_mc2_stderr": 0.14113653218626396
+    },
+    "all": {
+      "truthfulqa_mc1": 0.3,
+      "truthfulqa_mc1_stderr": 0.15275252316519466,
+      "truthfulqa_mc2": 0.4181127207417902,
+      "truthfulqa_mc2_stderr": 0.14113653218626396
+    }
+  },
+  "versions": {
+    "leaderboard|truthfulqa:mc|0": 0
+  },
+  "config_tasks": {
+    "leaderboard|truthfulqa:mc": {
+      "name": "truthfulqa:mc",
+      "prompt_function": "truthful_qa_multiple_choice",
+      "hf_repo": "truthful_qa",
+      "hf_subset": "multiple_choice",
+      "metric": [
+        {
+          "metric_name": [
+            "truthfulqa_mc1",
+            "truthfulqa_mc2"
+          ],
+          "higher_is_better": {
+            "truthfulqa_mc1": true,
+            "truthfulqa_mc2": true
+          },
+          "category": "8",
+          "use_case": "1",
+          "sample_level_fn": "truthfulqa_mc_metrics",
+          "corpus_level_fn": {
+            "truthfulqa_mc1": "mean",
+            "truthfulqa_mc2": "mean"
+          }
+        }
+      ],
+      "hf_revision": null,
+      "hf_filter": null,
+      "hf_avail_splits": [
+        "validation"
+      ],
+      "trust_dataset": true,
+      "evaluation_splits": [
+        "validation"
+      ],
+      "few_shots_split": null,
+      "few_shots_select": null,
+      "generation_size": -1,
+      "generation_grammar": null,
+      "stop_sequence": [
+        "\n"
+      ],
+      "num_samples": null,
+      "suite": [
+        "leaderboard"
+      ],
+      "original_num_docs": 817,
+      "effective_num_docs": 10,
+      "must_remove_duplicate_docs": false,
+      "version": 0
+    }
+  },
+  "summary_tasks": {
+    "leaderboard|truthfulqa:mc|0": {
+      "hashes": {
+        "hash_examples": "da0474ee913e995c",
+        "hash_full_prompts": "da0474ee913e995c",
+        "hash_input_tokens": "a0876e1dc0c05659",
+        "hash_cont_tokens": "9a2040fcc00f368f"
+      },
+      "truncated": 0,
+      "non_truncated": 10,
+      "padded": 109,
+      "non_padded": 10,
+      "effective_few_shots": 0.0,
+      "num_truncated_few_shots": 0
+    }
+  },
+  "summary_general": {
+    "hashes": {
+      "hash_examples": "d93946e268e80920",
+      "hash_full_prompts": "d93946e268e80920",
+      "hash_input_tokens": "55dbeb19a84e7498",
+      "hash_cont_tokens": "677766cd83df7079"
+    },
+    "truncated": 0,
+    "non_truncated": 10,
+    "padded": 109,
+    "non_padded": 10,
+    "num_truncated_few_shots": 0
+  }
+}
